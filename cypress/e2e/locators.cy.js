@@ -34,4 +34,21 @@ describe("Locators", () => {
     cy.get("[data-cy='btn-id-1']");
     cy.getByTestId("btn-id-1"); //Call to a function set on support/commands.js
   });
+
+  it("Locating elements with contains", () => {
+    // Get element by text
+    cy.contains("Unique Text");
+
+    //Get element by text (Not unique)
+    cy.contains("Not Unique Text");
+
+    // Combine Get and contains
+    cy.contains("[type='submit']", "Not Unique Text");
+    cy.get("[type='submit']").contains("Not Unique Text");
+  });
+
+  it("Locating elements with Find", ()=>{
+    cy.get("#form-1").find(".btn-1")
+    cy.get("#form-1").find(".btn-2")
+  })
 });
