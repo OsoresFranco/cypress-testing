@@ -10,29 +10,28 @@ describe("Locators", () => {
     cy.get("button");
 
     //Get all elements by class
-    cy.get(".btn-with-class")
+    cy.get(".btn-with-class");
 
     //Get all elements by specific classes (attributes)
-    cy.get("[class='Elements-btn btn-with-class more-btn-classes']")
+    cy.get("[class='Elements-btn btn-with-class more-btn-classes']");
 
     // Get elements by ID
-    cy.get("#btn-with-id")
+    cy.get("#btn-with-id");
 
     //Get elements by Attribute
-    cy.get("[type='submit']")
+    cy.get("[type='submit']");
 
     //Get elements by tag name AND class
-    cy.get("button.Elements-btn")
+    cy.get("button.Elements-btn");
 
     //Get elements by tag name AND class AND id
-    cy.get("button.Elements-btn#btn-with-id")
+    cy.get("button.Elements-btn#btn-with-id");
 
     //Get elements by tag name AND class AND type attribute
-    cy.get("button.Elements-btn[type='submit']")
+    cy.get("button.Elements-btn[type='submit']");
 
     //Get all elements by specific data test id
-    cy.get("[data-cy='btn-id-1']")
-
-    
+    cy.get("[data-cy='btn-id-1']");
+    cy.getByTestId("btn-id-1"); //Call to a function set on support/commands.js
   });
 });
